@@ -1,0 +1,182 @@
+[
+ {
+  "q": "Which header gives you printf?",
+  "code": "",
+  "o": [
+   "stdio.h",
+   "math.h",
+   "string.h"
+  ],
+  "a": 0,
+  "h": [
+   "It is about standard input and output.",
+   "The name starts with 'std'."
+  ],
+  "ex": "stdio.h means 'standard input/output'. It declares printf and scanf, the functions that show text on the screen and read what the user types. math.h is for maths functions like sqrt, and string.h is for working with text."
+ },
+ {
+  "q": "Every C program starts running from which function?",
+  "code": "",
+  "o": [
+   "start()",
+   "main()",
+   "begin()"
+  ],
+  "a": 1,
+  "h": [
+   "It is the most famous function in C.",
+   "Its name means 'principal'."
+  ],
+  "ex": "Execution always begins in main(). The operating system calls it first, and the program ends when main finishes. start() and begin() are not special in C."
+ },
+ {
+  "q": "What does this print?",
+  "code": "printf(\"%d\", 2 + 3);",
+  "o": [
+   "23",
+   "5",
+   "2 + 3"
+  ],
+  "a": 1,
+  "h": [
+   "%d prints a whole number.",
+   "Add first, then print."
+  ],
+  "ex": "C first calculates 2 + 3, which is 5. %d tells printf to print a whole number, so it prints 5. It does not print 23 because + adds numbers instead of joining them, and it does not print the expression because that is outside the quotes."
+ },
+ {
+  "q": "Which line declares an integer variable?",
+  "code": "",
+  "o": [
+   "int x;",
+   "integer x;",
+   "x int;"
+  ],
+  "a": 0,
+  "h": [
+   "The keyword is only three letters.",
+   "The type comes first, then the name."
+  ],
+  "ex": "In C you write the type first, then the variable name, then a semicolon: int x;. The keyword is int, not integer, and putting the name before the type is a syntax error."
+ },
+ {
+  "q": "Every simple C statement ends with...",
+  "code": "",
+  "o": [
+   ". (dot)",
+   "; (semicolon)",
+   ": (colon)"
+  ],
+  "a": 1,
+  "h": [
+   "Think of it as the full stop of C.",
+   "It also separates the parts of a for loop."
+  ],
+  "ex": "The semicolon marks the end of a statement, like a full stop in English. If you forget it, the compiler reports an error, often on the line after the one you missed. A dot and a colon have other jobs in C."
+ },
+ {
+  "q": "What does this print?",
+  "code": "int a = 5;\nprintf(\"%d\", a * 2);",
+  "o": [
+   "10",
+   "52",
+   "a*2"
+  ],
+  "a": 0,
+  "h": [
+   "a holds 5.",
+   "Multiply, then print the number."
+  ],
+  "ex": "The variable a holds 5, and a * 2 is 10. The * sign multiplies in C. printf prints the result of the calculation, not the letters a*2, and it never joins the digits to make 52."
+ },
+ {
+  "q": "Which format specifier prints a float?",
+  "code": "",
+  "o": [
+   "%d",
+   "%c",
+   "%f"
+  ],
+  "a": 2,
+  "h": [
+   "f stands for the type's first letter.",
+   "%d is for integers."
+  ],
+  "ex": "%f is the format specifier for float values (numbers with decimals). %d is for integers and %c is for single characters. Using the wrong one prints strange output, so always match the specifier to the type."
+ },
+ {
+  "q": "What is 7 % 3 ?",
+  "code": "",
+  "o": [
+   "2",
+   "1",
+   "2.33"
+  ],
+  "a": 1,
+  "h": [
+   "% gives the remainder.",
+   "7 = 3 x 2 + ?"
+  ],
+  "ex": "The % operator gives the remainder after division. 3 goes into 7 twice (that is 6), and 1 is left over, so 7 % 3 is 1. It never gives 2.33 because % works only with whole numbers."
+ },
+ {
+  "q": "How many stars are printed?",
+  "code": "for (i = 0; i < 3; i++)\n  printf(\"*\");",
+  "o": [
+   "2",
+   "3",
+   "4"
+  ],
+  "a": 1,
+  "h": [
+   "Count i = 0, 1, 2.",
+   "It stops when i < 3 is false."
+  ],
+  "ex": "The loop starts at i = 0 and runs while i < 3, so i is 0, 1 and 2. That is three times, and each time it prints one star, giving ***. When i becomes 3 the condition is false and the loop stops."
+ },
+ {
+  "q": "The first element of an array has index...",
+  "code": "",
+  "o": [
+   "1",
+   "0",
+   "-1"
+  ],
+  "a": 1,
+  "h": [
+   "C starts counting from the very first number.",
+   "a[?] is the first item."
+  ],
+  "ex": "C arrays are zero-indexed, so the first element is at index 0. An array of 3 items has indexes 0, 1 and 2. Reading a[3] would go outside the array, which is a very common bug."
+ },
+ {
+  "q": "What does this print?",
+  "code": "int a[3] = {1, 2, 3};\nprintf(\"%d\", a[1]);",
+  "o": [
+   "1",
+   "2",
+   "3"
+  ],
+  "a": 1,
+  "h": [
+   "Index starts at 0.",
+   "a[0] is 1, so a[1] is?"
+  ],
+  "ex": "Index 0 holds 1, index 1 holds 2, and index 2 holds 3, so a[1] is 2. The number in brackets is the position counted from zero, not the value stored there."
+ },
+ {
+  "q": "BOSS: what is printed?",
+  "code": "int i = 1;\nwhile (i < 4) { i++; }\nprintf(\"%d\", i);",
+  "o": [
+   "3",
+   "4",
+   "5"
+  ],
+  "a": 1,
+  "h": [
+   "The loop runs while i < 4.",
+   "It stops the moment i becomes 4."
+  ],
+  "ex": "i starts at 1. The loop runs while i < 4, adding 1 each time: 1 to 2, 2 to 3, 3 to 4. When i is 4 the condition i < 4 is false, so the loop ends and printf prints 4."
+ }
+]
